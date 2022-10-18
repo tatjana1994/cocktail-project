@@ -1,0 +1,15 @@
+.headerContainer {
+  display: flex;
+  background-color: #f0f2f7;
+  height: 50px;
+  justify-content: center;
+  .titleWrapper {
+    align-self: center;
+    font-size: 52px;
+    font-family: "Luckiest Guy";
+    color: #0ab0d9;
+    letter-spacing: 6px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  }
+}

@@ -1,0 +1,30 @@
+.searchContainer {
+  display: flex;
+}
+.inputStyle {
+  width: 425px;
+  padding-left: 16px;
+  height: 45px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  border: 1px solid #666666;
+  background-color: #f5f5f5;
+  color: #3c3835;
+  ::placeholder {
+    font-size: 14px;
+    color: #999999;
+    line-height: 20px;
+  }
+}
+.inputStyle:focus {
+  outline: none;
+  border: 1px solid #2c2c2c;
+  background-color: #fafafa;
+  color: #3c3835;
+}
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 16px;
+  fill: black;
+}

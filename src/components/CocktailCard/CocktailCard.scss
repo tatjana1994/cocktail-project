@@ -1,0 +1,21 @@
+.coctailCardContainer {
+  display: flex;
+  width: 400px;
+  height: 300px;
+  flex-direction: column;
+  margin: 0px 15px 30px 15px;
+  align-items: center;
+  border: 1px solid white;
+  box-shadow: 0px 2px 6px 1px rgba(66, 64, 62, 0.12);
+  border-radius: 10px;
+}
+.imageWrapper {
+  display: flex;
+  margin-top: 20px;
+}
+.titleWrapper {
+  font-size: 28px;
+  margin-top: 20px;
+  font-family: "Luckiest Guy";
+  text-align: center;
+}
