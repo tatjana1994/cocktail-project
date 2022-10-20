@@ -1,53 +1,17 @@
 import "./App.css"
 
 import React from "react"
+import { Route, Routes } from "react-router-dom"
 
-import mojito from "./assets/images/mojito.webp"
-import CocktailCard from "./components/CocktailCard"
-import CoverPhoto from "./components/CoverPhoto"
-import Header from "./components/Header"
+import CocktailsPage from "./components/pages/CocktailsPage"
+import RecipePage from "./components/pages/RecipePage"
 
 const App = () => {
-  const cocktailCard = [
-    {
-      title: "Mojito",
-      image: <img src={mojito} alt="mojito" width={200} height={200} />,
-    },
-    {
-      title: "Mojito",
-      image: <img src={mojito} alt="mojito" width={200} height={200} />,
-    },
-    {
-      title: "Mojito",
-      image: <img src={mojito} alt="mojito" width={200} height={200} />,
-    },
-    {
-      title: "Mojito",
-      image: <img src={mojito} alt="mojito" width={200} height={200} />,
-    },
-    {
-      title: "Mojito",
-      image: <img src={mojito} alt="mojito" width={200} height={200} />,
-    },
-    {
-      title: "Mojito",
-      image: <img src={mojito} alt="mojito" width={200} height={200} />,
-    },
-    {
-      title: "Mojito",
-      image: <img src={mojito} alt="mojito" width={200} height={200} />,
-    },
-  ]
   return (
-    <div>
-      <Header />
-      <CoverPhoto />
-      <div className="cocktailCardWrapper">
-        {cocktailCard.map(item => (
-          <CocktailCard title={item.title} image={item.image} />
-        ))}
-      </div>
-    </div>
+    <Routes>
+      <Route exact path="/" element={<CocktailsPage />} />
+      <Route exact path="/recipe" element={<RecipePage />} />
+    </Routes>
   )
 }
 
