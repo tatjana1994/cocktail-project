@@ -3,23 +3,26 @@ import "./CocktailCard.scss"
 import PropTypes from "prop-types"
 import React from "react"
 
-const CocktailCard = ({ title, image }) => {
+const CocktailCard = ({ data }) => {
   return (
     <div className="coctailCardContainer">
-      <div className="imageWrapper">{image}</div>
-      <div className="titleWrapper">{title}</div>
+      <div className="imageWrapper">
+        <img src={data.strDrinkThumb} width={150} height={150} alt="aaa" />
+      </div>
+      <div>
+        <div className="titleWrapper">{data.strDrink}</div>
+        <div className="descriptionWrapper">{data.strInstructions}</div>
+      </div>
     </div>
   )
 }
 
 CocktailCard.propTypes = {
-  title: PropTypes.string,
-  image: PropTypes.string,
+  data: PropTypes.instanceOf(Object),
 }
 
 CocktailCard.defaultProps = {
-  title: "",
-  image: "",
+  data: {},
 }
 
 export default CocktailCard
