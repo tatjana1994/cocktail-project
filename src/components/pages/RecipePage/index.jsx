@@ -73,7 +73,10 @@ const RecipePage = () => {
             <p className="specificationText">{data.strGlass}</p>
           </div>
 
-          <div className="recipeInstructions">Recipe: {data.strInstructions}</div>
+          <div className="recipeInstructions">
+            <div className="title">Recipe:</div>
+            <div className="recipe">{data.strInstructions}</div>
+          </div>
 
           <div className="recipeContainer">
             {data.strDrinkThumb ? (
@@ -91,7 +94,7 @@ const RecipePage = () => {
                 <p className="columnTitle">Ingredients</p>
                 {ingredients.map((item, index) => (
                   <p className="details" key={index}>
-                    {item}
+                    {item}:
                   </p>
                 ))}
               </div>

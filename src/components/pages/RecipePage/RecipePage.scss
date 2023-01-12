@@ -1,15 +1,24 @@
 .recipeContainer {
   display: flex;
-  padding-left: 50px;
-  margin-top: 40px;
+  padding: 0px 150px 40px 150px;
+  margin: 40px;
+  align-items: center;
+  justify-content: space-evenly;
   @media screen and (max-width: 650px) {
     flex-direction: column;
-    padding-left: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .image {
+    img {
+      border-radius: 6px;
+    }
     @media screen and (max-width: 650px) {
       display: flex;
       justify-content: center;
+      padding-bottom: 40px;
     }
   }
 }
@@ -17,9 +26,14 @@
 .cocktailSpecifications {
   display: flex;
   margin: 40px 10px;
+  padding: 20px 0px;
   justify-content: center;
   flex-direction: row;
   align-items: center;
+
+  @media screen and (max-width: 650px) {
+    margin: 40px 0px 40px 30px;
+  }
 }
 
 .specificationText {
@@ -30,8 +44,27 @@
 .recipeInstructions {
   display: flex;
   justify-content: center;
+  flex-direction: column;
   font-size: 18px;
-  margin: 0 50px;
+  margin: 0 150px;
+  text-align: center;
+
+  @media screen and (max-width: 650px) {
+    margin: 0px;
+  }
+}
+.title {
+  padding-bottom: 20px;
+  font-size: 22px;
+  font-weight: bold;
+}
+.recipe {
+  padding: 20px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  border-radius: 6px;
+  @media screen and (max-width: 650px) {
+    margin: 0px 20px;
+  }
 }
 
 .nameOfCockail {
@@ -41,23 +74,27 @@
   display: flex;
   margin-top: 40px;
   padding-bottom: 8px;
-  border-bottom: 2px solid black;
+  border-bottom: 1px solid black;
 }
 
 .ingredientsCointaner {
   display: flex;
   flex-direction: row;
+  padding: 40px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  border-radius: 6px;
   @media screen and (max-width: 650px) {
     display: flex;
     justify-content: center;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px;
   }
 
   .ingredientWrapper {
     display: flex;
     flex-direction: column;
-    padding-left: 30px;
+    @media screen and (max-width: 650px) {
+      padding-left: 0px;
+    }
   }
   .columnTitle {
     border-bottom: 2px solid black;

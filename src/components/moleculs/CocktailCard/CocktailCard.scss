@@ -1,11 +1,17 @@
 .coctailCardContainer {
   display: flex;
-  width: 800px;
   flex-direction: row;
   margin: 0px 15px 30px 15px;
-  border-bottom: 1px solid #999999;
-  padding-bottom: 20px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  padding: 20px;
   cursor: pointer;
+  border-radius: 6px;
+  @media screen and (max-width: 650px) {
+    width: 350px;
+  }
+  @media screen and (max-width: 400px) {
+    width: 300px;
+  }
 }
 
 .imageWrapper {
@@ -20,4 +26,17 @@
 }
 .descriptionWrapper {
   padding: 20px 10px 0px 20px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 200px;
+  height: 150px;
+  @media screen and (max-width: 650px) {
+    width: 180px;
+    font-size: 14px;
+  }
+  @media screen and (max-width: 400px) {
+    width: 120px;
+    font-size: 12px;
+    height: 117px;
+  }
 }
