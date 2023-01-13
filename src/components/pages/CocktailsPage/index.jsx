@@ -6,8 +6,8 @@ import { useNavigate } from "react-router-dom"
 import { useDebounce } from "../../../utils/hooks"
 import Header from "../../atoms/Header"
 import Loading from "../../atoms/Loading"
-import CocktailCard from "../../moleculs/CocktailCard"
-import SearchAndCoverWrapper from "../../moleculs/SearchAndCoverWrapper"
+import CocktailCard from "../../molecules/CocktailCard"
+import SearchAndCoverWrapper from "../../molecules/SearchAndCoverWrapper"
 
 const CocktailsPage = () => {
   const [data, setData] = useState([])

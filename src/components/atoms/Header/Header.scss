@@ -1,15 +1,17 @@
+@import "../../../colors.scss";
+
 .headerContainer {
   display: flex;
-  background-color: #f0f2f7;
+  background-color: $lightGray;
   height: 70px;
   justify-content: center;
   .headerTitleWrapper {
     align-self: center;
     font-size: 48px;
     font-family: "Anton", sans-serif;
-    color: white;
+    color: $white;
     letter-spacing: 6px;
     -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: black;
+    -webkit-text-stroke-color: $black;
   }
 }

@@ -4,9 +4,9 @@ import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 
 import noImage from "../../../assets/images/no-image.jpeg"
+import CocktailSpecification from "../../atoms/CocktailSpecification"
 import Header from "../../atoms/Header"
 import Loading from "../../atoms/Loading"
-import SvgIcon from "../../atoms/SvgIcon"
 
 const RecipePage = () => {
   const [data, setData] = useState({})
@@ -52,25 +52,16 @@ const RecipePage = () => {
       ) : (
         <>
           <div className="nameOfCockail"> {data.strDrink} </div>
-
           <div className="cocktailSpecifications">
-            {data.strAlcoholic === "Alcoholic" ? (
-              <>
-                <SvgIcon icon="alcohol" width={20} height={20} fill="black" />
-                <p className="specificationText">{data.strAlcoholic}</p>
-              </>
+            {data.strAlcoholic === "Alcoholic" || data.strAlcoholic === "Optional alcohol" ? (
+              <CocktailSpecification data={data.strAlcoholic} iconName="alcohol" />
             ) : (
-              <>
-                <SvgIcon icon="fruit" width={20} height={20} fill="black" />
-                <p className="specificationText">{data.strAlcoholic}</p>
-              </>
+              <div>
+                <CocktailSpecification data={data.strAlcoholic} iconName="fruit" />
+              </div>
             )}
-
-            <SvgIcon icon="star" width={24} height={24} fill="black" margin="0 0 0 20px" />
-            <p className="specificationText">{data.strCategory}</p>
-
-            <SvgIcon icon="glass" width={22} height={22} fill="black" margin="0 0 0 20px" />
-            <p className="specificationText">{data.strGlass}</p>
+            <CocktailSpecification data={data.strCategory} iconName="star" width={24} height={24} />
+            <CocktailSpecification data={data.strGlass} iconName="glass" width={22} height={22} />
           </div>
 
           <div className="recipeInstructions">
